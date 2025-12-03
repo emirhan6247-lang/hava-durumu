@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bornova Hava Tahmini</title>
+    <style>
+        /* GENEL AYARLAR */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e0f7fa; /* Arka plan rengi */
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 500px;
+            width: 100%;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            overflow: hidden;
+            padding-bottom: 20px;
+        }
+
+        /* BAŞLIK VE GÜNCELLEME */
+        header {
+            background: #0288d1;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        h1 { margin: 0; font-size: 1.5rem; }
+        .update-time { font-size: 0.8rem; opacity: 0.9; margin-top: 5px; }
+
+        /* UYARI KUTUSU */
+        .warning-box {
+            background-color: #fff3cd;
+            border-left: 5px solid #ffc107;
+            color: #856404;
+            padding: 10px 15px;
+            margin: 15px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+        .warning-title { font-weight: bold; display: block; margin-bottom: 3px; }
+
+        /* 1. GÜN (BÜYÜK GÖRÜNÜM) */
+        .today-card {
+            text-align: center;
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .today-day { font-size: 1.4rem; font-weight: bold; color: #0277bd; }
+        .today-icon { font-size: 80px; margin: 10px 0; }
+        .today-condition { font-size: 1.2rem; margin-bottom: 10px; font-weight: 500; }
+        .today-temp { font-size: 2rem; font-weight: bold; }
+        .today-temp span { font-size: 1rem; color: #666; font-weight: normal; }
+
+        /* DİĞER GÜNLER (YAN YANA KÜÇÜK) */
+        .next-days-wrapper {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 15px;
+            margin-top: 15px;
+            gap: 10px;
+        }
+
+        .small-card {
+            background: #f9f9f9;
+            flex: 1;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .small-day { font-weight: bold; color: #555; display: block; margin-bottom: 5px; }
+        .small-icon { font-size: 30px; display: block; margin-bottom: 5px; }
+        .small-temp { font-weight: bold; color: #333; }
+        .small-cond { font-size: 0.8rem; color: #666; display: block; }
+        .low-temp { color: #888; font-size: 0.9em; }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <header>
+            <h1>Bornova Hava Tahmini</h1>
+            <div class="update-time">Son Güncelleme: Çarşamba, 14:07</div>
+        </header>
+
+        <div class="warning-box">
+            <span class="warning-title">⚠️ DİKKAT:</span>
+            Sabah saatleri serin. Gün içinde hafif yağmur geçişleri görülebilir!
+        </div>
+
+        <div class="today-card">
+            <div class="today-day">PERŞEMBE (YARIN)</div>
+            
+            <div class="today-icon">🌦️❓</div>
+            
+            <div class="today-condition">YAĞMUR İHTİMALİ</div>
+            
+            <div class="today-temp">
+                19°C <span class="low-temp">/ 8°C</span>
+            </div>
+        </div>
+
+        <div class="next-days-wrapper">
+            
+            <div class="small-card">
+                <span class="small-day">CUMA</span>
+                <span class="small-icon">⛈️</span>
+                <span class="small-cond">GÖKGÜRÜLTÜLÜ SAĞANAK YAĞIŞLI</span>
+                <div class="small-temp">18° / <span class="low-temp">11°</span></div>
+            </div>
+
+            <div class="small-card">
+                <span class="small-day">CUMARTESİ</span>
+                <span class="small-icon">🌦️</span>
+                <span class="small-cond">YER YER SAĞANAK YAĞIŞLI</span>
+                <div class="small-temp">20° / <span class="low-temp">11°</span></div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
